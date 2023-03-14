@@ -49,10 +49,10 @@ export function HomePage() {
               recusandae tempore harum numquam impedit doloribus nam. Iusto dolor
             </p>
             <NavLink
-              className="text-white bg-gradient-to-l from-cyan-500 to-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
+              className="text-white bg-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
               to="/Projects"
             >
-              MY PROJECTS
+              ABOUT ME
             </NavLink>
           </div>
         </div>
