@@ -1,6 +1,6 @@
 import NavBar from "../Components/NavBar";
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Intrests } from "../Components/Intrests";
 
 export function HomePage() {
@@ -13,16 +13,16 @@ export function HomePage() {
             <div className="flex flex-col">
               <h5 className="text-lg">I am</h5>
               <h2 className="text-4xl ">Jamie de Leest</h2>
-              <p className="text-base my-3  text-gray-500">
+              <p className="text-base my-3 mb-10 text-gray-500">
                 Computer Software Engineer
               </p>
               <div className="flex">
-                <NavLink
+                <Link
                   className="text-white bg-gradient-to-l from-cyan-500 to-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
                   to="/Projects"
                 >
                   MY PROJECTS
-                </NavLink>
+                </Link>
               </div>
             </div>
             <a href="https://fabiothomas.vercel.app/">
@@ -30,10 +30,10 @@ export function HomePage() {
             </a>
           </div>
         </div>
-        <div className="bg-white px-40 py-10">
+        <div className="bg-white px-40 flex flex-col gap-12 py-10">
           <h2 className="text-4xl font-semibold">PERSONAL DETAILS</h2>
-          <div>
-            <p className="border-l-2 pl-7 my-6 text-gray-500 font-light border-blue-500">
+          <div className="flex flex-col gap-12">
+            <p className="border-l-2 pl-7 text-gray-500 font-light border-blue-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
               sapiente consectetur cum recusandae tempore harum numquam impedit
               doloribus nam. Iusto dolor veniam illum earum ipsum vero
@@ -48,12 +48,13 @@ export function HomePage() {
               consectetur adipisicing elit. Autem sapiente consectetur cum
               recusandae tempore harum numquam impedit doloribus nam. Iusto dolor
             </p>
-            <NavLink
-              className="text-white bg-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
+            <Link
+              className="text-white w-fit bg-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
               to="/Projects"
+              
             >
               ABOUT ME
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div>
