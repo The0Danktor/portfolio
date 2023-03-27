@@ -2,14 +2,15 @@ import NavBar from "../Components/NavBar";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Intrests } from "../Components/Intrests";
-
+import { AcademicCapIcon, ChartBarIcon, CommandLineIcon } from "@heroicons/react/24/outline"
+ 
 export function HomePage() {
   return (
     <div className="flex flex-col h-full w-auto bg-stone-100 text-black ">
       <NavBar />
       <div className="flex flex-col  justify-center w-auto bg-stone-100">
-        <div className="flex flex-row w-full justify-center">
-          <div className="flex flex-row justify-around items-center mx-20 my-10 w-full ">
+        <div className="flex flex-row  w-full justify-center">
+          <div className="flex flex-row  justify-around items-center mx-20 my-10 w-full ">
             <div className="flex flex-col">
               <h5 className="text-lg">I am</h5>
               <h2 className="text-4xl ">Jamie de Leest</h2>
@@ -30,31 +31,33 @@ export function HomePage() {
             </a>
           </div>
         </div>
-        <div className="bg-white px-40 flex flex-col gap-12 py-10">
-          <h2 className="text-4xl font-semibold">PERSONAL DETAILS</h2>
-          <div className="flex flex-col gap-12">
-            <p className="border-l-2 pl-7 text-gray-500 font-light border-blue-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              sapiente consectetur cum recusandae tempore harum numquam impedit
-              doloribus nam. Iusto dolor veniam illum earum ipsum vero
-              reprehenderit vitae obcaecati quae. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Autem sapiente consectetur cum
-              recusandae tempore harum numquam impedit doloribus nam. Iusto dolor
-              veniam illum earum ipsum vero reprehenderit vitae obcaecati quae.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              sapiente consectetur cum recusandae tempore harum numquam impedit
-              doloribus nam. Iusto dolor veniam illum earum ipsum vero
-              reprehenderit vitae obcaecati quae. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Autem sapiente consectetur cum
-              recusandae tempore harum numquam impedit doloribus nam. Iusto dolor
-            </p>
-            <Link
-              className="text-white w-fit bg-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
-              to="/Projects"
-              
-            >
-              ABOUT ME
-            </Link>
+        <div className="bg-white flex flex-row justify-center">
+          <div className="bg-white px-40 flex flex-col gap-12 py-10">
+            <h2 className="text-4xl font-semibold">PERSONAL DETAILS</h2>
+            <div className="flex flex-col  gap-12">
+              <p className="border-l-2 pl-7 text-gray-500 font-light border-blue-500 max-w-5xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                sapiente consectetur cum recusandae tempore harum numquam
+                impedit doloribus nam. Iusto dolor veniam illum earum ipsum vero
+                reprehenderit vitae obcaecati quae. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Autem sapiente consectetur cum
+                recusandae tempore harum numquam impedit doloribus nam. Iusto
+                dolor veniam illum earum ipsum vero reprehenderit vitae
+                obcaecati quae. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Autem sapiente consectetur cum recusandae
+                tempore harum numquam impedit doloribus nam. Iusto dolor veniam
+                illum earum ipsum vero reprehenderit vitae obcaecati quae. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Autem
+                sapiente consectetur cum recusandae tempore harum numquam
+                impedit doloribus nam. Iusto dolor
+              </p>
+              <Link
+                className="text-white w-fit bg-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
+                to="/Projects"
+              >
+                ABOUT ME
+              </Link>
+            </div>
           </div>
         </div>
         <div>
@@ -63,17 +66,17 @@ export function HomePage() {
             <div className="flex justify-around m-6 w-full">
               <Intrests
                 title="Machine Learning"
-                logo={<div>Logo</div>}
+                logo={<AcademicCapIcon/>}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
               />
               <Intrests
                 title="Data Science"
-                logo={<div>Logo</div>}
+                logo={<ChartBarIcon/>}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
               />
               <Intrests
                 title="Software Development"
-                logo={<div>Logo</div>}
+                logo={<CommandLineIcon/>}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
               />
             </div>
