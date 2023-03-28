@@ -8,7 +8,7 @@ interface skill {
 
 interface SkillCatagoryProps {
   title: string;
-  skills: [skill];
+  skills: skill[];
 }
 
 export default function SkillCatagory(props: SkillCatagoryProps) {
