@@ -82,6 +82,13 @@ export function HomePage() {
             </div>
           </div>
         </div>
+        <div className="bg-white flex flex-row justify-center">
+          <div className="bg-white px-40 flex flex-col gap-12 py-10">
+            <h2 className="text-4xl font-semibold">Skills Expertisse</h2>
+            <div className="flex flex-col  gap-12">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
