@@ -2,8 +2,13 @@ import NavBar from "../Components/NavBar";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Intrests } from "../Components/Intrests";
-import { AcademicCapIcon, ChartBarIcon, CommandLineIcon } from "@heroicons/react/24/outline"
- 
+import {
+  AcademicCapIcon,
+  ChartBarIcon,
+  CommandLineIcon,
+} from "@heroicons/react/24/outline";
+import SkillCatagory from "../Components/SkillCatagory";
+
 export function HomePage() {
   return (
     <div className="flex flex-col h-full w-auto bg-stone-100 text-black ">
@@ -65,28 +70,38 @@ export function HomePage() {
             <h2 className="text-4xl font-semibold">Areas of Interests</h2>
             <div className="flex justify-around m-6 w-full">
               <Intrests
+                title="Software Development"
+                logo={<CommandLineIcon />}
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
+              />
+              <Intrests
                 title="Machine Learning"
-                logo={<AcademicCapIcon/>}
+                logo={<AcademicCapIcon />}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
               />
               <Intrests
                 title="Data Science"
-                logo={<ChartBarIcon/>}
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
-              />
-              <Intrests
-                title="Software Development"
-                logo={<CommandLineIcon/>}
+                logo={<ChartBarIcon />}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem"
               />
             </div>
           </div>
         </div>
-        <div className="bg-white flex flex-row justify-center">
-          <div className="bg-white px-40 flex flex-col gap-12 py-10">
-            <h2 className="text-4xl font-semibold">Skills Expertisse</h2>
-            <div className="flex flex-col  gap-12">
+        <div className="bg-white flex flex-col  items-center">
+          <div className="bg-white px-40 flex flex-col items-center py-10">
+            <h2 className="text-4xl mb-4 font-semibold">Skills Expertisse</h2>
+            <div className="flex flex-row mb-2 justify-between">
+              <span className="mx-2 text-base text-gray-500">1 - Basic</span>
+              <span className="mx-2 text-base text-gray-500">2 - Novice</span>
+              <span className="mx-2 text-base text-gray-500">3 - Intermediate</span>
             </div>
+            <p className="text-base  text-gray-500"> 4 - Advanced 5 - Expert </p>
+            <div className="flex flex-col  gap-12"></div>
+          </div>
+          <div className="flex flex-row justify-between">
+            <SkillCatagory title="Software Development" skills={[ {title:"Backend(C#/EF)", level:4}, {title:" Frontend(React Typescript)", level:3} ] }/>
+            <SkillCatagory title="Machine Learning" skills={[ {title:"Python", level:3}, {title:"Tensorflow", level:2} ] }/>
+            <SkillCatagory title="Project Managment" skills={[ {title:"Scrum", level:3},  ] }/>
           </div>
         </div>
       </div>
