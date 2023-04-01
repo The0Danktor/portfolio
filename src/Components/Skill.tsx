@@ -6,11 +6,9 @@ interface SkillProps {
 }
 
 export default function Skill(props: SkillProps) {
-  const [preccent, setPreccent] = useState(0);
-
-    useEffect(() => {
-        setPreccent( props.level *20 );
-    }, [props.level]);
+  
+  const preccent = props.level * 20;
+  // make a variable to store the fracture like 1/5
 
   return (
     <div className="flex flex-col items-end">
