@@ -8,6 +8,8 @@ import {
   CommandLineIcon,
 } from "@heroicons/react/24/outline";
 import SkillCatagory from "../Components/SkillCatagory";
+import { LatestProjects } from "../Components/LatestProjects";
+import { Platforms } from "../Components/Platforms";
 
 export function HomePage() {
   return (
@@ -56,19 +58,13 @@ export function HomePage() {
                 sapiente consectetur cum recusandae tempore harum numquam
                 impedit doloribus nam. Iusto dolor
               </p>
-              <Link
-                className="text-white w-fit bg-blue-500 p-3 hover:text-white hover:shadow-lg hover:shadow-blue-300 transition duration-300"
-                to="/Projects"
-              >
-                ABOUT ME
-              </Link>
             </div>
           </div>
         </div>
         <div>
           <div className="flex flex-col justify-center items-center px-40 py-10">
             <h2 className="text-4xl font-semibold">Areas of Interests</h2>
-            <div className="flex justify-around m-6 w-full">
+            <div className="flex justify-around m-6 px-20 w-full">
               <Intrests
                 title="Software Development"
                 logo={<CommandLineIcon />}
@@ -87,7 +83,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="bg-white flex flex-col  items-center">
+        <div className="bg-white flex flex-col  items-center pb-20">
           <div className="bg-white px-40 flex flex-col items-center py-10">
             <h2 className="text-4xl mb-4 font-semibold">Skills Expertisse</h2>
             <div className="flex flex-row mb-2 justify-between">
@@ -103,6 +99,12 @@ export function HomePage() {
             <SkillCatagory title="Machine Learning" skills={[ {title:"Python", level:3}, {title:"Tensorflow", level:2} ] }/>
             <SkillCatagory title="Project Managment" skills={[ {title:"Scrum", level:3},  ] }/>
           </div>
+        </div>
+        <div className="flex flex-col  items-center ">
+          <LatestProjects />
+        </div>
+        <div className="bg-white flex flex-col  items-center">
+          <Platforms/>
         </div>
       </div>
     </div>
