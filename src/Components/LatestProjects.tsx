@@ -27,7 +27,7 @@ export function LatestProjects() {
       <ul className="flex flex-row justify-between">
         {repos.map((repo) => (
           <li className="w-72 mx-8" key={repo.id}>
-            <img className="" src="./src/assets/githublogo2.png" alt="github logo" />
+            <img className="" src="/githublogo2.png" alt="github logo" />
             <p className="text-base text-gray-500 mb-6">{/* change the string formate from 2022-11-1120:39:58Z  2022-11-11 */}{repo.updated_at.substring(0, 10)}</p>
             <a className="text-black text-lg" href={repo.html_url} target="_blank" rel="noreferrer">
               {repo.name}

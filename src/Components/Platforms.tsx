@@ -14,7 +14,7 @@ export function Platforms() {
           >
             <img
               className="w-8 h-8"
-              src="./src/assets/linkedin.png"
+              src="/linkedin.png"
               alt="linkedin logo"
             />
           <h3>
