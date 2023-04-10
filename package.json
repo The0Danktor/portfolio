@@ -7,7 +7,8 @@
     "dev": "vite",
     "host": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "debug" : "vite --debug"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
@@ -17,6 +18,7 @@
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^7.0.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",

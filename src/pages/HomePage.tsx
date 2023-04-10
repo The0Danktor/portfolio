@@ -34,9 +34,10 @@ export function HomePage() {
                 </Link>
               </div>
             </div>
-            <a href="https://fabiothomas.vercel.app/">
-              <div className="bg-slate-600 w-96 h-96"></div>
-            </a>
+
+            <div className="bg-slate-600 w-96 h-96 ">
+              <img className="h-96" src="/filler.jpg " alt="" />
+            </div>
           </div>
         </div>
         <div className="bg-white flex flex-row justify-center">
@@ -146,7 +147,7 @@ export function HomePage() {
           <LatestProjects />
         </div>
         <div className="bg-white flex flex-col  items-center">
-          <Platforms/>
+          <Platforms />
         </div>
         <div>
           <Footer />
