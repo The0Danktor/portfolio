@@ -43,20 +43,37 @@ export function HomePage() {
             <h2 className="text-4xl font-semibold">PERSONAL DETAILS</h2>
             <div className="flex flex-col  gap-12">
               <p className="border-l-2 pl-7 text-gray-500 font-light border-blue-500 max-w-5xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                sapiente consectetur cum recusandae tempore harum numquam
-                impedit doloribus nam. Iusto dolor veniam illum earum ipsum vero
-                reprehenderit vitae obcaecati quae. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Autem sapiente consectetur cum
-                recusandae tempore harum numquam impedit doloribus nam. Iusto
-                dolor veniam illum earum ipsum vero reprehenderit vitae
-                obcaecati quae. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Autem sapiente consectetur cum recusandae
-                tempore harum numquam impedit doloribus nam. Iusto dolor veniam
-                illum earum ipsum vero reprehenderit vitae obcaecati quae. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Autem
-                sapiente consectetur cum recusandae tempore harum numquam
-                impedit doloribus nam. Iusto dolor
+                Hello, I'm a computer software engineering student who's
+                passionate about building software that solves real-world
+                problems. My primary focus has been on backend development using
+                C#, but I'm also skilled in frontend development with TypeScript
+                and React.
+                <br />
+                <br />
+                I've worked on a variety of projects, ranging from small web
+                applications to large enterprise-level software solutions.
+                Through these experiences, I've developed a deep understanding
+                of software development principles and best practices. I'm
+                always looking for new challenges to tackle and opportunities to
+                learn.
+                <br />
+                <br />
+                In addition to my experience in software engineering, I'm also
+                interested in the field of data science and machine learning.
+                I'm fascinated by the power of these technologies to uncover
+                insights and solve complex problems. I've taken courses in data
+                analysis, machine learning, and statistics, and I'm eager to
+                apply these skills to real-world problems.
+                <br />
+                <br />
+                I believe that the combination of my software engineering
+                expertise and my growing data science knowledge makes me
+                well-suited for building end-to-end software solutions that
+                leverage the power of data. If you have any projects or
+                opportunities that require a data-driven approach, I would love
+                to hear more about them!
+                <br />
+                <br />
               </p>
             </div>
           </div>
@@ -64,7 +81,7 @@ export function HomePage() {
         <div>
           <div className="flex flex-col justify-center items-center px-40 py-10">
             <h2 className="text-4xl font-semibold">Areas of Interests</h2>
-            <div className="flex justify-around m-6 px-20 w-full">
+            <div className="flex justify-around items-center m-6 w-full">
               <Intrests
                 title="Software Development"
                 logo={<CommandLineIcon />}
@@ -89,15 +106,39 @@ export function HomePage() {
             <div className="flex flex-row mb-2 justify-between">
               <span className="mx-2 text-base text-gray-500">1 - Basic</span>
               <span className="mx-2 text-base text-gray-500">2 - Novice</span>
-              <span className="mx-2 text-base text-gray-500">3 - Intermediate</span>
+              <span className="mx-2 text-base text-gray-500">
+                3 - Intermediate
+              </span>
             </div>
-            <p className="text-base  text-gray-500"> 4 - Advanced 5 - Expert </p>
+            <p className="text-base  text-gray-500">
+              {" "}
+              4 - Advanced 5 - Expert{" "}
+            </p>
             <div className="flex flex-col  gap-12"></div>
           </div>
           <div className="flex flex-row justify-between">
-            <SkillCatagory title="Software Development" skills={[ {title:"Backend(C#/EF)", level:4}, {title:" Frontend(React Typescript)", level:3} ] }/>
-            <SkillCatagory title="Machine Learning" skills={[ {title:"Python", level:3}, {title:"Tensorflow", level:2} ] }/>
-            <SkillCatagory title="Project Managment" skills={[ {title:"Scrum", level:3},  ] }/>
+            <SkillCatagory
+              title="Software Development"
+              skills={[
+                { title: "Backend(C#/EF)", level: 4 },
+                { title: " Frontend(React Typescript)", level: 3 },
+              ]}
+            />
+            <SkillCatagory
+              title="Machine Learning"
+              skills={[
+                { title: "Python", level: 3 },
+                { title: "Pandas", level: 2 },
+                { title: "Tensorflow", level: 1 },
+              ]}
+            />
+            <SkillCatagory
+              title="Project Managment"
+              skills={[
+                { title: "Scrum", level: 3 },
+                { title: "Git", level: 4 },
+              ]}
+            />
           </div>
         </div>
         <div className="flex flex-col  items-center ">
@@ -107,6 +148,7 @@ export function HomePage() {
           <Platforms/>
         </div>
       </div>
+      <div className="hidden w-[20%] w-[40%] w-[60%] w-[80%] w-[100%]"></div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ interface IntrestsProps {
 export function Intrests(props: IntrestsProps) {
   return (
     <div>
-      <div className="flex flex-col justify-center items-center gap-4">
+      <div className="flex flex-col justify-center w-52 items-center gap-4">
         <div className=" w-8 h-8 text-slate-800 rounded-full flex justify-center items-center">
           {props.logo}
         </div>
