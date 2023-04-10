@@ -10,6 +10,7 @@ import {
 import SkillCatagory from "../Components/SkillCatagory";
 import { LatestProjects } from "../Components/LatestProjects";
 import { Platforms } from "../Components/Platforms";
+import { Footer } from "../Components/Footer";
 
 export function HomePage() {
   return (
@@ -146,6 +147,9 @@ export function HomePage() {
         </div>
         <div className="bg-white flex flex-col  items-center">
           <Platforms/>
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
       <div className="hidden w-[20%] w-[40%] w-[60%] w-[80%] w-[100%]"></div>
