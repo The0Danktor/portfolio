@@ -124,6 +124,7 @@ export function HomePage() {
               skills={[
                 { title: "Backend(C#/EF)", level: 4 },
                 { title: " Frontend(React Typescript)", level: 3 },
+                { title: "Database(Postgress SQL)", level: 4 },
               ]}
             />
             <SkillCatagory
@@ -139,6 +140,7 @@ export function HomePage() {
               skills={[
                 { title: "Scrum", level: 3 },
                 { title: "Git", level: 4 },
+                { title: "Agile", level: 3 },
               ]}
             />
           </div>
