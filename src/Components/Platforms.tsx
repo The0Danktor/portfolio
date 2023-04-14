@@ -5,7 +5,7 @@ export function Platforms() {
     <div className="flex flex-col items-center w-full px-48">
       <h2 className="text-4xl mb-4 font-semibold mt-10">Other Platforms</h2>
       <div className="flex flex-row items-center justify-around w-full p-20">
-        <div className="flex flex-col items-center justify-center gap-4 p-32 py-24  hover:bg-blue-300 transition duration-300">
+        <div className="flex flex-col items-center justify-center gap-4 p-16 py-4  hover:bg-blue-300 transition duration-300">
           <a
             className="flex flex-col items-center justify-center gap-4"
             href="
@@ -22,7 +22,7 @@ export function Platforms() {
             <p></p>
           </a>
         </div>
-        <div className="flex flex-col items-center gap-4 p-44 py-36 hover:bg-blue-300 transition duration-300">
+        <div className="flex flex-col items-center gap-4 p-28 py-16  hover:bg-blue-300 transition duration-300">
           <a
             className="flex flex-col items-center justify-center gap-4"
             href="
