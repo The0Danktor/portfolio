@@ -1,0 +1,47 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            docker build -t project-d-circleci:latest .
+
+      - run:
+          name: Save Docker image as artifact
+          command: |
+            mkdir -p ~/artifacts
+            docker save project-d-circleci:latest > ~/artifacts/project-d-circleci_latest.tar
+      
+      - run:
+          name: Install Syft
+          command: |
+            sudo chmod u+w /usr/local/bin
+            sudo curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sudo sh -s -- -b /usr/local/bin
+
+      - run:
+          name: Scan Docker image
+          command: |
+            syft project-d-circleci:latest -q -v -o cyclonedx-json > ~/artifacts/syft.json
+
+      - run:
+          name: Push artifacts to GitHub
+          command: |
+            git config --global user.email "lucas2002prins@gmail.com"
+            git config --global user.name "lucasprins"
+            git clone https://github.com/HR-Project-D/pw-demo-sboms
+            cd pw-demo-sboms
+            mkdir -p $CIRCLE_PROJECT_REPONAME
+            cp ~/artifacts/syft.json $CIRCLE_PROJECT_REPONAME/${CIRCLE_BUILD_NUM}.cyclonedx.json
+            git add .
+            git commit -m "Uploading SBOM for $CIRCLE_BUILD_NUM in CycloneDX JSON format."
+            git push
+
+      - store_artifacts:
+          path: ~/artifacts
+          destination: project-d-circleci-artifacts
