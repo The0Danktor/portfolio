@@ -37,7 +37,7 @@ jobs:
             git clone git@github.com:HR-Project-D/sbom-storage.git
             cd sbom-storage
             mkdir -p $CIRCLE_PROJECT_REPONAME
-            cp ~/artifacts/syft.json $CIRCLE_PROJECT_REPONAME/${CIRCLE_BUILD_NUM}.cyclonedx.json
+            cp ~/artifacts/syft.json $CIRCLE_PROJECT_REPONAME.cyclonedx.json
             git add .
             git commit -m "Uploading SBOM for $CIRCLE_BUILD_NUM in CycloneDX JSON format."
             git push
